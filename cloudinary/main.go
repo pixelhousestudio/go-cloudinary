@@ -13,8 +13,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/gotsunami/go-cloudinary"
 	"github.com/outofpluto/goconfig/config"
+	"github.com/pixelhousestudio/go-cloudinary"
 )
 
 type Config struct {
@@ -154,7 +154,6 @@ func printResources(res []*cloudinary.Resource, err error) {
 	}
 }
 
-/*
 func printResourceDetails(res *cloudinary.ResourceDetails, err error) {
 	if err != nil {
 		fail(err.Error())
@@ -175,7 +174,6 @@ func printResourceDetails(res *cloudinary.ResourceDetails, err error) {
 		fmt.Printf("%-25s %-8d %-s\n", d.Transformation, d.Size, d.Url)
 	}
 }
-*/
 
 func perror(err error) {
 	fmt.Fprintf(os.Stderr, "Error: %s\n", err.Error())
@@ -305,7 +303,7 @@ uri=cloudinary://api_key:api_secret@cloud_name
 	case "ls":
 		if *optImg != "" {
 			fmt.Println("==> Image Details:")
-			//printResourceDetails(service.ResourceDetails(*optImg))
+			printResourceDetails(service.ResourceDetails(*optImg))
 		} else {
 			fmt.Println("==> Raw resources:")
 			printResources(service.Resources(cloudinary.RawType))

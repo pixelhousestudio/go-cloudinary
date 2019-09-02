@@ -1,12 +1,12 @@
-hash: baf95e9136f1918b6d3da903c81e607ca9170c46e24b15ae850e3fe6c2624716
-updated: 2019-09-02T15:50:39.536058109+07:00
+hash: 580abdc463452bd6e3929d54b665b76b7030abafb77f883555cdc95c783d6010
+updated: 2019-09-02T16:09:48.633199485+07:00
 imports:
-- name: github.com/gotsunami/go-cloudinary
-  version: 1216300b6d57f89bfa40f47236e9f661f71a84f2
 - name: github.com/outofpluto/goconfig
   version: 0b3e87a7e8f2b425d87a1d97b2975fb421df1a55
   subpackages:
   - config
+- name: github.com/pixelhousestudio/go-cloudinary
+  version: dde91ba7ee71897669363e544f26e10312b8074a
 - name: gopkg.in/mgo.v2
   version: 3f83fa5005286a7fe593b055f0d7771a7dce4655
   subpackages:
