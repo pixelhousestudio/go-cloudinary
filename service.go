@@ -80,12 +80,12 @@ type Resource struct {
 }
 
 type pagination struct {
-	NextCursor int64 `json: "next_cursor"`
+	NextCursor int64 `json:"next_cursor"`
 }
 
 type resourceList struct {
 	pagination
-	Resources []*Resource `json: "resources"`
+	Resources []*Resource `json:"resources"`
 }
 
 type ResourceDetails struct {
