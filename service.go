@@ -628,7 +628,7 @@ func (s *Service) Rename(publicID, toPublicID, prepend string, rtype ResourceTyp
 	}
 	// Signature
 	hash := sha1.New()
-	part := fmt.Sprintf("from_public_id=%s&timestamp=%s&to_public_id=%s%s", prepend+publicID, timestamp, toPublicID, s.apiSecret)
+	part := fmt.Sprintf("from_public_id=%s&timestamp=%s&to_public_id=%s%s", prepend+publicID, timestamp, prepend+toPublicID, s.apiSecret)
 	io.WriteString(hash, part)
 	data.Set("signature", fmt.Sprintf("%x", hash.Sum(nil)))
 
